@@ -1,0 +1,343 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#title {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #414141aa, #272727aa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  color: #fff;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.top i {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+h1 {
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+}
+
+#title img {
+  margin-top: 20px;
+  width: clamp(300px, 90%, 500px);
+  aspect-ratio: 1/1;
+  /* add a gradient box shadow almost matching background */
+  box-shadow: 0px 0px 5px 5px #272727aa;
+}
+
+
+#name-container{
+  padding: 0;
+  width: 90%;
+}
+
+#name-container #circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  /* set the border color to match the green accent of spotify */
+  border: 3px solid #1db954;
+  border-radius: 50%;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #1db954;
+  background-color: #1db954;
+}
+
+.song {
+  margin-left: 5%;
+}
+
+#title h2 {
+  width: 90%;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+#title h3 {
+  font-size: 14px;
+  color: #c0c0c0;
+  font-weight: 100;
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+#prog-bar-empty {
+  width: 90%;
+  height: 5px;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+}
+
+#prog-bar-full {
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px 0 0 5px;
+}
+
+#prog-bar-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 18%;
+  margin-top: -3px;
+}
+
+#prog-bar-circle:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+
+#controls {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-left: -10px;
+  margin-bottom: 32px;
+}
+
+#play {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+a:hover {
+  transform: rotate(90deg) translateY(3px);
+  transition: 0.3s ease-in-out;
+}
+
+a:not(:hover) {
+  transform: rotate(0deg) translateY(0px);
+  transition: 0.3s ease-in-out;
+}
+
+#controls * {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 26px;
+  margin-inline: 20px;
+}
+
+#controls i {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#controls i:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#about {
+  margin: 0;
+  width: 100%;
+  background-color: #121212;
+}
+
+#about-title {
+  font-size: 36px;
+  color: #fff;
+}
+
+#about h2 {
+  position: relative;
+  top: 2%;
+}
+
+#filters {
+  font-size: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 4%;
+}
+
+#filters > *:not(:first-child){
+  margin: 0 7px;
+  background-color: #2a2a2a;
+  height: 30px;
+  border-radius: 17px;
+  padding-top: 10px;
+}
+
+#filters > *:not(:first-child):hover {
+  cursor: pointer;
+  background-color: #1db954;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+#close {
+  width: 30px;
+  height: 30px;
+  background-color: #2a2a2a;
+  border-radius: 50%;
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+#close i {
+  position: relative;
+  top: 5px;
+  left: 7px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.filter {
+  padding-inline: 10px;
+}
+
+.skills-title {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sub {
+  margin-top: 36px;
+}
+
+hr {
+  border: 1px solid #1db954;
+  width: 20px;
+
+}
+
+#skills {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  margin-left: 5%;
+}
+
+.skill {
+  flex: 1 0 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin: 2px;
+  padding-inline: 10px;
+}
+
+.skill:hover {
+  cursor: pointer;
+  color: #1db954;
+}
+
+.skill * {
+  margin: 0 10px;
+}
+
+.skill i {
+  font-size: 36px;
+}
+
+#projects {
+  /* display contents inline while allowing overflow on the x axis */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  height: 150px;
+  margin-bottom: 32px;
+  margin-left: 5%;
+  /* enable scrolling on x axis without overflow */
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#projects::-webkit-scrollbar {
+  display: none;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  flex: 1 0 30%;
+}
+
+.project i {
+  font-size: 80px;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.project i:hover {
+  cursor: pointer;
+  color: #1db954;
+}
