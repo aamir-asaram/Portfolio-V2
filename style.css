@@ -268,6 +268,7 @@ hr {
 
 #skills {
   width: 90%;
+  max-height: 380px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -275,6 +276,14 @@ hr {
   justify-content: center;
   margin-top: 18px;
   margin-left: 5%;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#skills::-webkit-scrollbar {
+  display: none;
 }
 
 .skill {
