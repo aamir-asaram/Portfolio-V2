@@ -12,7 +12,7 @@ const setGreetings = () => {
   greeting.textContent = `Good ${timeOfDay[timeIndex]}`;
   }
 
-setInterval(setGreetings, 1000);
+setInterval(setGreetings, 1001);
 
 const titles = ['Full-Stack Software Developer', 'Student at Microverse', 'Coffee Fanatic'];
 const title = document.querySelector('#title-text');
