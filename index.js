@@ -1,6 +1,14 @@
 const setGreetings = () => {
-  const date = new Date();
-  const timeIndex = Math.floor(date.getHours() / 8);
+  let timeIndex = 2;
+  const hour = new Date().getHours();
+
+  if (hour > 4 && hour < 12) {
+    timeIndex = 0;
+  } else if (hour >= 12 && hour < 17) {
+    timeIndex = 1;
+  } else {
+    timeIndex = 2;
+  }
 
   const timeOfDay = [
     'morning',
