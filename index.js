@@ -1,6 +1,7 @@
 import { DateTime, Interval } from "./node_modules/luxon/src/luxon.js";
 
-const date = DateTime.local();
+const setGreetings = () => {
+  const date = DateTime.local();
 let timeIndex = 2;
 if (Interval.fromDateTimes(
   DateTime.fromObject({ hour: 12 }),
@@ -22,3 +23,6 @@ const timeOfDay = [
 
 const greeting = document.querySelector('#about-title');
 greeting.textContent = `Good ${timeOfDay[timeIndex]}`;
+}
+
+setInterval(setGreetings, 1000);
