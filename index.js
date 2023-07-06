@@ -18,9 +18,10 @@ const setGreetings = () => {
 
   const greeting = document.querySelector('#about-title');
   greeting.textContent = `Good ${timeOfDay[timeIndex]}`;
+
   }
 
-setInterval(setGreetings, 1001);
+setInterval(setGreetings, 400);
 
 const titles = ['Full-Stack Software Developer', 'Student at Microverse', 'Coffee Fanatic'];
 const title = document.querySelector('#title-text');
