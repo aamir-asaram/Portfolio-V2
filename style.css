@@ -491,6 +491,10 @@ hr {
     display: flex;
   }
 
+  #form-title {
+    display: none;
+  }
+
   #mobile-form {
     display: none;
   }
