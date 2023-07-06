@@ -40,3 +40,5 @@ prev.addEventListener('click', () => {
   index = (index - 1 + titles.length) % titles.length;
   title.textContent = titles[index];
 });
+
+document.addEventListener('click', (e) => {console.log(e.target)})

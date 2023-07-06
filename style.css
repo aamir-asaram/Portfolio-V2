@@ -432,7 +432,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    overflow-x: hidden;
     margin: 0;
     justify-content: center;
   }
