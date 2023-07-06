@@ -487,6 +487,10 @@ hr {
     margin-bottom: 40px;
   }
 
+  #title form {
+    display: flex;
+  }
+
   #mobile-form {
     display: none;
   }
