@@ -38,14 +38,6 @@ const home = () => {
 
 }
 
-document.addEventListener('click', (e) => {
-  if (e.target.textContent === 'WiFi') {
-    wifi();
-  } else if (e.target.textContent === 'Home') {
-    home();
-  }
-});
-
 const hamburger = () => {
   const menu = document.createElement('div');
   menu.classList.add('menu');
