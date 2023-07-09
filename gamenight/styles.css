@@ -1,6 +1,8 @@
 :root {
-  --background: #000;
-  --text: #fff;
+  --background: #190015;
+  --text: #ffebfc;
+  --primary: #f90154;
+  --secondary: #00470c;
 }
 
 body {
@@ -12,6 +14,23 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-family: 'Roboto', sans-serif;
+}
+
+#close {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 32px;
+  color: var(--text);
+}
+
+
+i {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 32px;
+  color: var(--text);
 }
 
 nav {
@@ -26,18 +45,28 @@ nav {
 
 h1 {
   padding: 0;
+  color: var(--primary);
 }
 
 #content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 90%;
-  border: 5px solid var(--text);
-  border-radius: 5%;
-  padding: 16px;
+  height: calc(100vh - 60px);
   padding-bottom: 60px;
   box-sizing: border-box;
+}
+
+#home-content {
+  /* background-color: var(--secondary); */
+  border-radius: 5px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -47,6 +76,26 @@ h1 {
   margin-bottom: 16px;
 }
 
-#content p {
-  margin: 0;
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+  box-sizing: border-box;
+  font-size: 32px;
+  margin: 8px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  background-color: var(--background);
+  color: var(--text);
+  box-sizing: border-box;
+  padding: 20% 0 0 10%;
 }
