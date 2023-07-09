@@ -7,6 +7,15 @@ body {
   justify-content: center;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #title {
@@ -195,9 +204,10 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding-inline: 20px;
+  border-radius: 20px;
   width: 85%;
-
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 form > *:not(:nth-child(3)) {
@@ -207,8 +217,9 @@ form > *:not(:nth-child(3)) {
 }
 
 form > *:not(:last-child) {
-  background-color: #272727aa;
+  background-color: #2727277e;
   border: none;
+  /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1); */
   padding: 10px;
   color: #fff;
 }
@@ -241,13 +252,20 @@ input[type="submit"]:hover {
 }
 
 #about-title {
-  font-size: 36px;
+  font-size: 45px;
   color: #fff;
 }
 
 #about h2 {
   position: relative;
   top: 2%;
+}
+
+#title p {
+  font-size: 22px;
+  color: #fff;
+  margin-left: 5%;
+  width: 70%;
 }
 
 #filters {
@@ -433,7 +451,7 @@ hr {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   #title img {
@@ -470,6 +488,10 @@ hr {
   }
 
   #about::-webkit-scrollbar {
+    display: none;
+  }
+
+  #filters {
     display: none;
   }
 

@@ -17,7 +17,7 @@ const setGreetings = () => {
   ];
 
   const greeting = document.querySelector('#about-title');
-  greeting.textContent = `Good ${timeOfDay[timeIndex]}`;
+  greeting.textContent = `Good ${timeOfDay[timeIndex]}, let me introduce myself.`;
 
   }
 
@@ -41,4 +41,29 @@ prev.addEventListener('click', () => {
   title.textContent = titles[index];
 });
 
-document.addEventListener('click', (e) => {console.log(e.target)})
+const projects = [
+  {
+    title: 'Code & Coffee',
+    description: 'A website showcasing an event for developers to meet and share ideas.',
+    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    live: 'https://aamir-asaram.github.io/capstone-one/',
+    source: 'https://github.com/aamir-asaram/capstone-one',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Code & Coffee',
+    description: 'A website showcasing an event for developers to meet and share ideas.',
+    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    live: 'https://aamir-asaram.github.io/capstone-one/',
+    source: 'https://github.com/aamir-asaram/capstone-one',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Code & Coffee',
+    description: 'A website showcasing an event for developers to meet and share ideas.',
+    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    live: 'https://aamir-asaram.github.io/capstone-one/',
+    source: 'https://github.com/aamir-asaram/capstone-one',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+]
