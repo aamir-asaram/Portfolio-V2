@@ -41,6 +41,7 @@ const home = () => {
 const address = () => {
   container.innerHTML = `
   <div id="home-content">
+    <h2>Address</h2>
     <a href="https://www.google.com/maps/place/34%C2%B000'30.8%22S+18%C2%B030'44.1%22E/@-34.0065506,18.5074125,16.22z/data=!4m4!3m3!8m2!3d-34.008548!4d18.512262?entry=ttu"><img src="./map.png" alt=""></a>
     <p>45 Mayfield Village</p>
     <p>Abbott Road, Wetton</p>
