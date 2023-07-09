@@ -1,4 +1,5 @@
 const container = document.querySelector('#content');
+let isMenu = false;
 console.log(container);
 const wifi = () => {
   container.innerHTML = `
@@ -35,11 +36,22 @@ const home = () => {
       </p>
     </div>
     `;
+}
 
+const address = () => {
+  container.innerHTML = `
+  <div id="home-content">
+    <a href="https://www.google.com/maps/place/34%C2%B000'30.8%22S+18%C2%B030'44.1%22E/@-34.0065506,18.5074125,16.22z/data=!4m4!3m3!8m2!3d-34.008548!4d18.512262?entry=ttu"><img src="./map.png" alt=""></a>
+    <p>45 Mayfield Village</p>
+    <p>Abbott Road, Wetton</p>
+  </div>
+  `;
 }
 
 const hamburger = () => {
   const menu = document.createElement('div');
+  isMenu = true;
+  document.removeEventListener('touchmove', hamburger);
   menu.classList.add('menu');
   menu.innerHTML = `
   <i class="fas fa-times" id="close"></i>
@@ -59,13 +71,18 @@ const hamburger = () => {
       address();
     } else if (e.target.id === 'close') {
       menu.remove();
+      addSwipe();
     }
+  });
+
+  menu.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    menu.remove();
   });
 };
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', hamburger);
-
 // hamburger();
 
 home();
