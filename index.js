@@ -18,7 +18,6 @@ const setGreetings = () => {
 
   const greeting = document.querySelector('#about-title');
   greeting.textContent = `Good ${timeOfDay[timeIndex]}, let me introduce myself.`;
-
   }
 
 setInterval(setGreetings, 400);
