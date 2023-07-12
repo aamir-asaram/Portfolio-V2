@@ -58,6 +58,7 @@ const hamburger = () => {
   <i class="fas fa-times" id="close"></i>
   <p>Home</p>
   <p>Address</p>
+  <p>Playlist</p>
   <p>WiFi</p>
   `;
   container.appendChild(menu);
@@ -73,6 +74,9 @@ const hamburger = () => {
     } else if (e.target.id === 'close') {
       menu.remove();
       addSwipe();
+    } else if (e.target.textContent === 'Playlist') {
+      menu.remove();
+      playlist();
     }
   });
 
@@ -81,6 +85,16 @@ const hamburger = () => {
     menu.remove();
   });
 };
+
+const playlist = () => {
+  container.innerHTML = `
+  <div id="home-content">
+    <h2>Playlist</h2>
+    <p>Feel free to contribute <br>(pls don't spam ABBA)</p>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/041G2zZzpqK7Vwgg5FpOER?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+  `;
+}
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', hamburger);

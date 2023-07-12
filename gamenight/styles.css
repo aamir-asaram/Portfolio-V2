@@ -118,3 +118,7 @@ h1 {
   color: var(--primary);
   cursor: pointer;
 }
+
+iframe {
+  margin-top: 32px;
+}
