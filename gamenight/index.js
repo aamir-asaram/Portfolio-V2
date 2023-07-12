@@ -100,14 +100,7 @@ const toggleLightMode = () => {
   return !light;
 };
 
-// determine if device theme is light or dark
-const isLightMode = () => {
-  return window.matchMedia('(prefers-color-scheme: light)').matches;
-};
 
-if (isLightMode()) {
-  document.querySelector('#dark-mode').class = 'fas fa-bars';
-}
 
 const setTheme = () => {
   light = toggleLightMode();
