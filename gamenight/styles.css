@@ -61,7 +61,6 @@ h1 {
 }
 
 #home-content {
-  /* background-color: var(--secondary); */
   border-radius: 5px;
   padding: 16px;
   display: flex;
