@@ -122,3 +122,8 @@ h1 {
 iframe {
   margin-top: 32px;
 }
+
+a {
+  width: max-content;
+  color: var(--text);
+}

@@ -89,7 +89,7 @@ const hamburger = () => {
 const playlist = () => {
   container.innerHTML = `
   <div id="home-content">
-    <h2>Playlist</h2>
+    <a href="https://open.spotify.com/playlist/041G2zZzpqK7Vwgg5FpOER?si=0364134db79a4e13&pt=c852d262d8517ca72194bd2e86998490"><h2>Playlist</h2></a>
     <p>Feel free to contribute <br>(pls don't spam ABBA)</p>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/041G2zZzpqK7Vwgg5FpOER?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
