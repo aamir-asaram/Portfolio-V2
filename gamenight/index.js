@@ -104,8 +104,6 @@ const toggleLightMode = () => {
 
 const setTheme = () => {
   light = toggleLightMode();
-  document.querySelector('#dark-mode').classList.toggle('fa-sun');
-    document.querySelector('#dark-mode').classList.toggle('fa-moon');
   if (light) {
     //set :root variable
     document.documentElement.style.setProperty('--primary', '#f90154');
