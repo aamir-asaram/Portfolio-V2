@@ -121,8 +121,6 @@ const setTheme = () => {
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', hamburger);
-
-document.querySelector('#dark-mode').addEventListener('click', setTheme);
 // hamburger();
 
 home();
