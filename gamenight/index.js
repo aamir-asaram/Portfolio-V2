@@ -95,9 +95,43 @@ const playlist = () => {
   </div>
   `;
 }
+let light = false;
+const toggleLightMode = () => {
+  return !light;
+};
+
+// determine if device theme is light or dark
+const isLightMode = () => {
+  return window.matchMedia('(prefers-color-scheme: light)').matches;
+};
+
+if (isLightMode()) {
+  document.querySelector('#dark-mode').class = 'fas fa-bars';
+}
+
+const setTheme = () => {
+  light = toggleLightMode();
+  document.querySelector('#dark-mode').classList.toggle('fa-sun');
+    document.querySelector('#dark-mode').classList.toggle('fa-moon');
+  if (light) {
+    //set :root variable
+    document.documentElement.style.setProperty('--primary', '#f90154');
+    document.documentElement.style.setProperty('--secondary', '#00470c');
+    document.documentElement.style.setProperty('--background', '#ffebfc');
+    document.documentElement.style.setProperty('--text', '#190015');
+
+  } else {
+    document.documentElement.style.setProperty('--primary', '#f90154');
+    document.documentElement.style.setProperty('--secondary', '#00470c');
+    document.documentElement.style.setProperty('--background', '#190015');
+    document.documentElement.style.setProperty('--text', '#ffebfc');
+  }
+};
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', hamburger);
+
+document.querySelector('#dark-mode').addEventListener('click', setTheme);
 // hamburger();
 
 home();
