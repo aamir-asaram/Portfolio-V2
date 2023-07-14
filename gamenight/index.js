@@ -60,6 +60,7 @@ const hamburger = () => {
   <p>Address</p>
   <p>Playlist</p>
   <p>WiFi</p>
+  <p>RSVP</p>
   `;
   container.appendChild(menu);
   menu.addEventListener('click', (e) => {
@@ -77,6 +78,9 @@ const hamburger = () => {
     } else if (e.target.textContent === 'Playlist') {
       menu.remove();
       playlist();
+    } else if (e.target.textContent === 'RSVP') {
+      menu.remove();
+      rsvp();
     }
   });
 
@@ -122,5 +126,18 @@ const setTheme = () => {
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', hamburger);
 // hamburger();
+
+const rsvp = () => {
+  container.innerHTML = `
+  <div id="home-content">
+    <h2>RSVP</h2>
+    <form action="https://formspree.io/f/moqoqzez" method="POST" id="rsvp">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="submit" value="RSVP">
+    </form>
+  </div>
+  `;
+};
+
 
 home();

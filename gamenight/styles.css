@@ -132,3 +132,40 @@ a {
   bottom: 16px;
   right: 16px;
 }
+
+#rsvp {
+  display: flex;
+  flex-direction: column;
+}
+
+#rsvp input {
+  margin: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+#rsvp input:focus {
+  background-color: var(--background);
+  outline: 2px solid var(--primary);
+}
+
+#rsvp input:active {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+#rsvp input::placeholder {
+  color: var(--text);
+}
+
+#rsvp input[type="submit"] {
+  background-color: var(--primary);
+  color: var(--text);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
