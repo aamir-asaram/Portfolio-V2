@@ -60,7 +60,7 @@ const hamburger = () => {
   <p>Address</p>
   <p>Playlist</p>
   <p>WiFi</p>
-  <p>RSVP</p>
+  <p id="rsvp-menu">RSVP</p>
   `;
   container.appendChild(menu);
   menu.addEventListener('click', (e) => {
@@ -132,11 +132,20 @@ const rsvp = () => {
   <div id="home-content">
     <h2>RSVP</h2>
     <form action="https://formspree.io/f/moqoqzez" method="POST" id="rsvp">
-      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="name" placeholder="Name" id="name" required>
       <input type="submit" value="RSVP">
     </form>
   </div>
   `;
+  const form = document.querySelector('#rsvp');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelector('#name').value = '';
+    form.innerHTML = `
+    <h2>Thanks for RSVPing!</h2>
+    `;
+
+  })
 };
 
 
