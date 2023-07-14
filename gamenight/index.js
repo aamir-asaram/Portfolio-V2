@@ -137,15 +137,6 @@ const rsvp = () => {
     </form>
   </div>
   `;
-  const form = document.querySelector('#rsvp');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.querySelector('#name').value = '';
-    form.innerHTML = `
-    <h2>Thanks for RSVPing!</h2>
-    `;
-
-  })
 };
 
 
