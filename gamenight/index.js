@@ -32,7 +32,7 @@ const home = () => {
         <b>Game Night Pt. 2</b>
       </p>
       <p id="home">
-        <b>3:00 PM - 9:00 PM</b>
+        <b>4:00 PM - 9:00 PM</b>
       </p>
     </div>
     `;
