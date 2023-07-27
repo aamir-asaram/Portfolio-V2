@@ -191,12 +191,21 @@ a:not(:hover) {
 }
 
 #mobile-form {
-  margin: 20px;
-  margin-left: 5%;
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #fff;
 }
 
-#mobile-form > * {
-  margin: 10px 0;
+#mobile-form h2 {
+  margin-top: 30px;
+}
+
+#mobile-form:first-child {
+  margin-top: 30px;
+}
+
+#mobile-form:last-child {
+  margin-bottom: 32px;
 }
 
 form {
@@ -204,15 +213,20 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-inline: 20px;
   border-radius: 20px;
   width: 85%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: #ffffff52;
+
 }
 
-form > *:not(:nth-child(3)) {
+form input:first-child {
+  margin-top: 20px;
+}
+
+form > *:not(:nth-child(4)) {
   margin: 6px 0;
-  width: 100%;
+  width: 90%;
   height: 30px;
 }
 
@@ -225,12 +239,12 @@ form > *:not(:last-child) {
 }
 
 textarea {
-  width: 100%;
+  width: 90%;
   margin: 6px 0;
 }
 
 input[type="submit"] {
-  width: 103%;
+  width: 90%;
   height: 35px;
   background-color: #1db954;
   border: none;
@@ -486,7 +500,7 @@ hr {
   background-color: #1db954;
   border: none;
   outline: none;
-  margin-top: 16px;
+  margin-top: 8px;
   width: 70%;
   height: 40px;
   border-radius: 25px;

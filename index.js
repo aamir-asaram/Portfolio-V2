@@ -127,7 +127,6 @@ const moveBack = () => {
 projects.forEach((project) => {
   project.addEventListener('click', () => {
     if (openProject && openedProject === project) {
-      console.log('same');
       removeProjectDetails();
       moveBack();
       openProject = false;
@@ -179,7 +178,6 @@ const addProjectDetails = (project) => {
 //remove all project details
 const removeProjectDetails = () => {
   const details = document.querySelectorAll('.project-details');
-  console.log(details);
   details.forEach((detail) => {
     //add a transition to the project details
     detail.style.transform = 'translateX(-100vw)';
@@ -189,3 +187,18 @@ const removeProjectDetails = () => {
     }, 700);
   })
 }
+
+const submit = document.querySelector('#form-submit');
+
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const message = document.querySelector('#message');
+  const form = document.querySelector('form');
+
+  if (name.value && email.value && message.value) {
+    form.submit();
+    form.reset();
+  }
+});
