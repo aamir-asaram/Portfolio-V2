@@ -210,6 +210,7 @@ projects.forEach((project) => {
       openProject = false;
       openedProject = null;
     } else if (openProject) {
+      openedProject.style.color = '#fff';
       removeProjectDetails();
       moveDown(project);
       addProjectDetails(project);
