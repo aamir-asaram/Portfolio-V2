@@ -53,10 +53,10 @@ const projectList = [
   {
     title: 'Space Travelers&apos; Hub',
     description: '<b>Space Travelers&apos; Hub</b> is a web application for a company that provides commercial and scientific space travel services. <b>Tags:</b>',
-    image: './assets/meal.png',
+    image: './assets/space.png',
     live: 'https://space-travelers-hub-i4jc.onrender.com/',
     source: 'https://github.com/Kgomotso196/Space-Travelers',
-    tags: ['React', 'Redux', 'JavaScript', 'Desktop'],
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-rocket',
   },
   {
@@ -65,7 +65,7 @@ const projectList = [
     image: './assets/meal.png',
     live: 'https://htetwaiyan7191.github.io/meal-gallery/dist',
     source: 'https://github.com/HtetWaiYan7191/meal-gallery',
-    tags: ['CSS', 'JavaScript', 'Desktop'],
+    tags: ['CSS', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-carrot',
   },
   {
@@ -74,7 +74,7 @@ const projectList = [
     image: './assets/math.png',
     live: 'https://math-magicians-hvym.onrender.com',
     source: 'https://github.com/aamir-asaram/math-magicians',
-    tags: ['React', 'JavaScript', 'Desktop'],
+    tags: ['React', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-calculator',
   },
   {
@@ -83,7 +83,7 @@ const projectList = [
     image: './assets/math.png',
     live: '',
     source: 'https://github.com/aamir-asaram/bookstore',
-    tags: ['React', 'Redux', 'JavaScript', 'Desktop'],
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-book',
   },
 ]

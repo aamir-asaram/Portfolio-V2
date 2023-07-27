@@ -467,17 +467,16 @@ hr {
 .project-tags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 0;
-  margin-bottom: 0;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
 
 .project-tags li {
   padding: 6px 10px;
-  margin: 0 4px;
+  margin: 6px 4px;
   background-color: #1db95460;
   border-radius: 25px;
   color: #fff;
