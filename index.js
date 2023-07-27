@@ -126,10 +126,16 @@ let openedProject = null;
 const moveBack = () => {
   projects.forEach((project) => {
     project.style.transform = 'translateY(0)';
-    project.style.transition = 'transform 1s ease-in-out';
+    project.style.transition = 'transform 0.6s ease-in-out';
   });
+  // setTimeout(() => {
+
+
+  // }, 800);
   projectContainer.style.maxHeight = '300px';
   projectContainer.style.height = 'auto';
+  // add transition to container resize
+  projectContainer.style.transition = 'max-height 0.7s ease-in-out';
 }
 
 //add event listeners to all projects
