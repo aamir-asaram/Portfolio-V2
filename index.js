@@ -44,28 +44,44 @@ const projectList = [
   {
     title: 'Code & Coffee',
     description: 'A website showcasing an event for developers to meet and share ideas.',
-    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    image: './assets/c&c.png',
     live: 'https://aamir-asaram.github.io/capstone-one/',
     source: 'https://github.com/aamir-asaram/capstone-one',
     tags: ['HTML', 'CSS', 'JavaScript'],
+    icon: 'fas fa-coffee',
   },
   {
-    title: 'Code & Coffee',
+    title: 'Meal Gallery',
     description: 'A website showcasing an event for developers to meet and share ideas.',
-    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    image: './assets/meal.png',
     live: 'https://aamir-asaram.github.io/capstone-one/',
     source: 'https://github.com/aamir-asaram/capstone-one',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['CSS', 'JavaScript'],
+    icon: 'fas fa-carrot',
   },
   {
-    title: 'Code & Coffee',
+    title: 'Math Magicians',
     description: 'A website showcasing an event for developers to meet and share ideas.',
-    image: 'https://res.cloudinary.com/djgqcdehv/image/upload/v1614628929/Portfolio%20Website/weather-app.png',
+    image: './assets/math.png',
     live: 'https://aamir-asaram.github.io/capstone-one/',
     source: 'https://github.com/aamir-asaram/capstone-one',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['React', 'JavaScript'],
+    icon: 'fas fa-calculator',
   },
 ]
+
+const projectContainer = document.querySelector('#skills');
+
+projectList.forEach((project) => {
+  const projectDiv = document.createElement('div');
+  projectDiv.classList.add('skill');
+  projectDiv.id = projectList.indexOf(project);
+  projectDiv.innerHTML = `
+    <i class="${project.icon}"></i>
+    <h3>${project.title}</h3>
+  `;
+  projectContainer.appendChild(projectDiv);
+});
 
 const projects = document.querySelectorAll('.skill');
 
@@ -117,8 +133,12 @@ projects.forEach((project) => {
 const addProjectDetails = (project) => {
   const projectDetails = document.createElement('div');
   projectDetails.classList.add('project-details');
+  const index = project.id;
   projectDetails.innerHTML = `
-    <h2>Code & Coffee</h2>
+    <img src="${projectList[index].image}" alt="${projectList[index].title}">
+    <h2>${projectList[index].title}</h2>
+    <ul class="project-tags">
+      ${projectList[index].tags.map((tag) => `<li>${tag}</li>`).join('')}
   `;
   //add details as next sibling of the clicked project
   project.parentElement.insertBefore(projectDetails, project.nextSibling);
