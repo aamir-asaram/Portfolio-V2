@@ -40,6 +40,21 @@ prev.addEventListener('click', () => {
   title.textContent = titles[index];
 });
 
+const progress = document.querySelector('#prog-bar-full');
+const circle = document.querySelector('#prog-bar-circle');
+let width = 1;
+
+const setProgress = () => {
+  progress.style.width = `${width/100*5}%`;
+  //set circle left margin
+  circle.style.marginLeft = `${width/100*4.5}%`;
+  width += 1;
+};
+
+setInterval(setProgress, 100);
+
+
+
 const projectList = [
   {
     title: 'Code & Coffee',
