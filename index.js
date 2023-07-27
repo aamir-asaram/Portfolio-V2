@@ -63,7 +63,6 @@ play.addEventListener('click', () => {
     play.classList.add('fa-play');
     //cancel interval and reset width
     clearInterval(progressBar);
-    console.log('stopped');
     playing = false;
   }
 });
@@ -74,7 +73,6 @@ next.addEventListener('click', () => {
   if (playing) {
     progressBar = setInterval(setProgress, 100);
   } else {
-    console.log('stopped');
     clearInterval(progressBar);
     setProgress();
   }
@@ -167,11 +165,11 @@ const moveDown = (clicked) => {
       project.style.transition = 'transform 0.7s ease-in-out';
     }
   });
-  projectContainer.style.maxHeight = '100vh';
+  projectContainer.style.maxHeight = '200vh';
   projectContainer.style.transition = 'max-height 0.7s ease-in-out';
 
-  projectContainer.style.height = '100vh';
-  //scroll page to the clicked project
+  projectContainer.style.height = 'fit-content';
+  //scroll
   window.scrollTo({
     top: clicked.offsetTop - 100,
     behavior: 'smooth',
@@ -206,6 +204,7 @@ const moveBack = () => {
 projects.forEach((project) => {
   project.addEventListener('click', () => {
     if (openProject && openedProject === project) {
+      openedProject.style.color = '#fff';
       removeProjectDetails();
       moveBack();
       openProject = false;
@@ -216,11 +215,13 @@ projects.forEach((project) => {
       addProjectDetails(project);
       openProject = true;
       openedProject = project;
+      openedProject.style.color = '#1db954';
     } else {
       moveDown(project);
       addProjectDetails(project);
       openProject = true;
       openedProject = project;
+      openedProject.style.color = '#1db954';
     }
   });
 });
