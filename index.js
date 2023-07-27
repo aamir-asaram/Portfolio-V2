@@ -138,6 +138,11 @@ const moveBack = () => {
   projectContainer.style.height = 'auto';
   // add transition to container resize
   projectContainer.style.transition = 'max-height 0.7s ease-in-out';
+  //scroll to the top of the projects container
+  window.scrollTo({
+    top: projectContainer.offsetTop - 100,
+    behavior: 'smooth',
+  });
 }
 
 //add event listeners to all projects
