@@ -110,6 +110,13 @@ const moveDown = (clicked) => {
       project.style.transition = 'transform 0.7s ease-in-out';
     }
   });
+  projectContainer.style.maxHeight = '100vh';
+  projectContainer.style.height = '100vh';
+  //scroll page to the clicked project
+  window.scrollTo({
+    top: clicked.offsetTop - 100,
+    behavior: 'smooth',
+  });
 };
 
 let openProject = false;
@@ -121,6 +128,8 @@ const moveBack = () => {
     project.style.transform = 'translateY(0)';
     project.style.transition = 'transform 1s ease-in-out';
   });
+  projectContainer.style.maxHeight = '300px';
+  projectContainer.style.height = 'auto';
 }
 
 //add event listeners to all projects
