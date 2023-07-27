@@ -56,7 +56,7 @@ const projectList = [
     image: './assets/meal.png',
     live: 'https://space-travelers-hub-i4jc.onrender.com/',
     source: 'https://github.com/Kgomotso196/Space-Travelers',
-    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop'],
     icon: 'fas fa-rocket',
   },
   {
@@ -65,7 +65,7 @@ const projectList = [
     image: './assets/meal.png',
     live: 'https://htetwaiyan7191.github.io/meal-gallery/dist',
     source: 'https://github.com/HtetWaiYan7191/meal-gallery',
-    tags: ['CSS', 'JavaScript', 'Desktop Only'],
+    tags: ['CSS', 'JavaScript', 'Desktop'],
     icon: 'fas fa-carrot',
   },
   {
@@ -74,7 +74,7 @@ const projectList = [
     image: './assets/math.png',
     live: 'https://math-magicians-hvym.onrender.com',
     source: 'https://github.com/aamir-asaram/math-magicians',
-    tags: ['React', 'JavaScript', 'Desktop Only'],
+    tags: ['React', 'JavaScript', 'Desktop'],
     icon: 'fas fa-calculator',
   },
   {
@@ -83,7 +83,7 @@ const projectList = [
     image: './assets/math.png',
     live: '',
     source: 'https://github.com/aamir-asaram/bookstore',
-    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop'],
     icon: 'fas fa-book',
   },
 ]
