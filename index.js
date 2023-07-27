@@ -17,7 +17,7 @@ const setGreetings = () => {
   ];
 
   const greeting = document.querySelector('#about-title');
-  greeting.textContent = `Good ${timeOfDay[timeIndex]}, let me introduce myself.`;
+  greeting.textContent = `Good ${timeOfDay[timeIndex]}.`;
   }
 
 setInterval(setGreetings, 400);
@@ -43,7 +43,7 @@ prev.addEventListener('click', () => {
 const projectList = [
   {
     title: 'Code & Coffee',
-    description: 'A website showcasing an event for developers to meet and share ideas.',
+    description: '<b>Code & Coffee</b> is a website showcasing an event for developers to meet and share ideas. <b>Built using:</b>',
     image: './assets/c&c.png',
     live: 'https://aamir-asaram.github.io/capstone-one/',
     source: 'https://github.com/aamir-asaram/capstone-one',
@@ -54,8 +54,8 @@ const projectList = [
     title: 'Meal Gallery',
     description: 'A website showcasing an event for developers to meet and share ideas.',
     image: './assets/meal.png',
-    live: 'https://aamir-asaram.github.io/capstone-one/',
-    source: 'https://github.com/aamir-asaram/capstone-one',
+    live: 'https://htetwaiyan7191.github.io/meal-gallery/dist',
+    source: 'https://github.com/HtetWaiYan7191/meal-gallery',
     tags: ['CSS', 'JavaScript'],
     icon: 'fas fa-carrot',
   },
@@ -63,10 +63,19 @@ const projectList = [
     title: 'Math Magicians',
     description: 'A website showcasing an event for developers to meet and share ideas.',
     image: './assets/math.png',
-    live: 'https://aamir-asaram.github.io/capstone-one/',
-    source: 'https://github.com/aamir-asaram/capstone-one',
+    live: 'https://math-magicians-hvym.onrender.com',
+    source: 'https://github.com/aamir-asaram/math-magicians',
     tags: ['React', 'JavaScript'],
     icon: 'fas fa-calculator',
+  },
+  {
+    title: 'CMS Bookstore',
+    description: 'A website showcasing an event for developers to meet and share ideas.',
+    image: './assets/math.png',
+    live: '',
+    source: 'https://github.com/aamir-asaram/bookstore',
+    tags: ['React', 'JavaScript'],
+    icon: 'fas fa-book',
   },
 ]
 
@@ -136,10 +145,16 @@ const addProjectDetails = (project) => {
   const index = project.id;
   projectDetails.innerHTML = `
     <img src="${projectList[index].image}" alt="${projectList[index].title}">
-    <h2>${projectList[index].title}</h2>
+    <hr>
+    <p>${projectList[index].description}</p>
     <ul class="project-tags">
       ${projectList[index].tags.map((tag) => `<li>${tag}</li>`).join('')}
+    </ul>
+    <button class="live"><a href="${projectList[index].source}" target="_blank">See Source</a></button>
   `;
+  if (projectList[index].live) {
+    projectDetails.innerHTML += `<button class="live"><a href="${projectList[index].live}" target="_blank">See Live</a></button>`;
+  }
   //add details as next sibling of the clicked project
   project.parentElement.insertBefore(projectDetails, project.nextSibling);
 

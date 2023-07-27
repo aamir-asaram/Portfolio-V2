@@ -154,7 +154,7 @@ a {
   color: #fff;
 }
 
-a:hover {
+#title a:hover {
   transform: rotate(90deg) translateY(3px);
   transition: 0.3s ease-in-out;
 }
@@ -432,7 +432,6 @@ hr {
   flex-direction: column;
   align-items: center;
   width: 97%;
-  height: 70vh;
   margin: 8px 0;
   background-color: #2a2a2a4a;
 }
@@ -442,6 +441,20 @@ hr {
   margin-bottom: 0;
   width: 90%;
   object-fit: cover;
+}
+
+.project-details hr {
+  width: 20%;
+  margin: 32px 0 16px;
+  border: 1px solid #1db954;
+}
+
+.project-details p {
+  font-size: 16px;
+  color: #fff;
+  margin: 16px 10px;
+  width: 90%;
+  text-align: center;
 }
 
 .project-details h2 {
@@ -456,7 +469,7 @@ hr {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 0;
   list-style: none;
   padding: 0;
@@ -465,9 +478,29 @@ hr {
 .project-tags li {
   padding: 6px 10px;
   margin: 0 4px;
-  background-color: #1db954;
+  background-color: #1db95460;
   border-radius: 25px;
   color: #fff;
+}
+
+.live {
+  background-color: #1db954;
+  border: none;
+  outline: none;
+  margin-top: 16px;
+  width: 70%;
+  height: 40px;
+  border-radius: 25px;
+}
+
+.live a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.live:last-child {
+  margin-bottom: 36px;
 }
 
 /* media query for desktop */
