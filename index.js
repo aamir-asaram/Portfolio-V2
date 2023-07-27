@@ -111,6 +111,8 @@ const moveDown = (clicked) => {
     }
   });
   projectContainer.style.maxHeight = '100vh';
+  projectContainer.style.transition = 'max-height 0.7s ease-in-out';
+
   projectContainer.style.height = '100vh';
   //scroll page to the clicked project
   window.scrollTo({
