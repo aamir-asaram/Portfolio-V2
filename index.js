@@ -24,36 +24,78 @@ setInterval(setGreetings, 400);
 
 const titles = ['Full-Stack Software Developer', 'Student at Microverse', 'Coffee Fanatic'];
 const title = document.querySelector('#title-text');
+const play = document.querySelector('#play');
+const playClass = document.querySelector('.play');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 
 let index = 0;
 title.textContent = titles[index];
 
-next.addEventListener('click', () => {
-  index = (index + 1) % titles.length;
-  title.textContent = titles[index];
-});
-
-prev.addEventListener('click', () => {
-  index = (index - 1 + titles.length) % titles.length;
-  title.textContent = titles[index];
-});
-
 const progress = document.querySelector('#prog-bar-full');
+const progEmpty = document.querySelector('#prog-bar-empty');
 const circle = document.querySelector('#prog-bar-circle');
 let width = 1;
+let playing = true;
 
 const setProgress = () => {
   progress.style.width = `${width/100*5}%`;
   //set circle left margin
   circle.style.marginLeft = `${width/100*4.5}%`;
-  width += 1;
+  //if progress bar is full, reset
+  if (width/100*5 >= 100) {
+    width = 1;
+    nextTitle();
+  } else {
+    width++;
+  }
 };
 
-setInterval(setProgress, 100);
+let progressBar = setInterval(setProgress, 100);
 
+play.addEventListener('click', () => {
+  if (play.classList.contains('fa-play')) {
+    play.classList.remove('fa-play');
+    play.classList.add('fa-pause');
+    progressBar = setInterval(setProgress, 100);
+  } else {
+    play.classList.remove('fa-pause');
+    play.classList.add('fa-play');
+    //cancel interval and reset width
+    clearInterval(progressBar);
+    console.log('stopped');
+    playing = false;
+  }
+});
 
+next.addEventListener('click', () => {
+  nextTitle();
+  width = 1;
+  if (playing) {
+    progressBar = setInterval(setProgress, 100);
+  } else {
+    console.log('stopped');
+    clearInterval(progressBar);
+    setProgress();
+  }
+});
+
+const nextTitle = () => {
+  index = (index + 1) % titles.length;
+  title.textContent = titles[index];
+};
+
+prev.addEventListener('click', () => {
+  index = (index - 1 + titles.length) % titles.length;
+  title.textContent = titles[index];
+  width = 1;
+  if (playing) {
+    progressBar = setInterval(setProgress, 100);
+  } else {
+    clearInterval(progressBar);
+    setProgress();
+  }
+});
 
 const projectList = [
   {
