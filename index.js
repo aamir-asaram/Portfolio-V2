@@ -169,7 +169,7 @@ const moveDown = (clicked) => {
   projectContainer.style.transition = 'max-height 0.7s ease-in-out';
 
   projectContainer.style.height = 'fit-content';
-  //scroll
+  //scroll so the hr is at the center of the screen
   window.scrollTo({
     top: clicked.offsetTop - 100,
     behavior: 'smooth',
@@ -193,7 +193,8 @@ const moveBack = () => {
   projectContainer.style.height = 'auto';
   // add transition to container resize
   projectContainer.style.transition = 'max-height 0.7s ease-in-out';
-  //scroll to the top of the projects container
+  //scroll so the hr is at the center of the screen
+
   window.scrollTo({
     top: projectContainer.offsetTop - 100,
     behavior: 'smooth',
@@ -211,13 +212,15 @@ projects.forEach((project) => {
     } else if (openProject) {
       //add hover effect to opened project
       removeProjectDetails();
-      moveDown(project);
       addProjectDetails(project);
+      moveDown(project);
+
       openProject = true;
       openedProject = project;
     } else {
-      moveDown(project);
       addProjectDetails(project);
+      moveDown(project);
+
       openProject = true;
       openedProject = project;
     }
