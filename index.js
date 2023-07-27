@@ -43,20 +43,29 @@ prev.addEventListener('click', () => {
 const projectList = [
   {
     title: 'Code & Coffee',
-    description: '<b>Code & Coffee</b> is a website showcasing an event for developers to meet and share ideas. <b>Built using:</b>',
+    description: '<b>Code & Coffee</b> is a website showcasing an event for developers to meet and share ideas. <b>Tags:</b>',
     image: './assets/c&c.png',
     live: 'https://aamir-asaram.github.io/capstone-one/',
     source: 'https://github.com/aamir-asaram/capstone-one',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     icon: 'fas fa-coffee',
   },
   {
+    title: 'Space Travelers&apos; Hub',
+    description: '<b>Space Travelers&apos; Hub</b> is a web application for a company that provides commercial and scientific space travel services. <b>Tags:</b>',
+    image: './assets/meal.png',
+    live: 'https://space-travelers-hub-i4jc.onrender.com/',
+    source: 'https://github.com/Kgomotso196/Space-Travelers',
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
+    icon: 'fas fa-rocket',
+  },
+  {
     title: 'Meal Gallery',
-    description: 'A website showcasing an event for developers to meet and share ideas.',
+    description: 'A <b>meal gallery</b> website is an online platform dedicated to showcasing a vast collection of food-related images, recipes, culinary creations, and gastronomic experiences. <b>Tags:</b>',
     image: './assets/meal.png',
     live: 'https://htetwaiyan7191.github.io/meal-gallery/dist',
     source: 'https://github.com/HtetWaiYan7191/meal-gallery',
-    tags: ['CSS', 'JavaScript'],
+    tags: ['CSS', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-carrot',
   },
   {
@@ -65,7 +74,7 @@ const projectList = [
     image: './assets/math.png',
     live: 'https://math-magicians-hvym.onrender.com',
     source: 'https://github.com/aamir-asaram/math-magicians',
-    tags: ['React', 'JavaScript'],
+    tags: ['React', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-calculator',
   },
   {
@@ -74,7 +83,7 @@ const projectList = [
     image: './assets/math.png',
     live: '',
     source: 'https://github.com/aamir-asaram/bookstore',
-    tags: ['React', 'JavaScript'],
+    tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-book',
   },
 ]
