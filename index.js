@@ -204,13 +204,20 @@ const moveBack = () => {
 projects.forEach((project) => {
   project.addEventListener('click', () => {
     if (openProject && openedProject === project) {
-      openedProject.style.color = '#fff';
+      project.style.color = '#fff';
+      project.addEventListener('mouseenter', () => {
+        project.style.color = '#1db954';
+      });
+      project.addEventListener('mouseleave', () => {
+        project.style.color = '#fff';
+      });
       removeProjectDetails();
       moveBack();
       openProject = false;
       openedProject = null;
     } else if (openProject) {
       openedProject.style.color = '#fff';
+      //add hover effect to opened project
       removeProjectDetails();
       moveDown(project);
       addProjectDetails(project);
@@ -222,7 +229,7 @@ projects.forEach((project) => {
       addProjectDetails(project);
       openProject = true;
       openedProject = project;
-      openedProject.style.color = '#1db954';
+      project.style.color = '#1db954';
     }
   });
 });
