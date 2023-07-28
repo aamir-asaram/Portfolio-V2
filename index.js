@@ -188,10 +188,6 @@ const moveDown = (clicked) => {
       project.style.transition = 'transform 0.7s ease-in-out';
     }
   });
-  projectContainer.style.maxHeight = '200vh';
-  projectContainer.style.transition = 'max-height 0.7s ease-in-out';
-
-  projectContainer.style.height = 'fit-content';
   //scroll so the hr is at the center of the screen
   window.scrollTo({
     top: clicked.offsetTop - 100,
@@ -214,7 +210,6 @@ const moveBack = () => {
   // }, 800);
   projectContainer.style.height = 'auto';
   // add transition to container resize
-  projectContainer.style.transition = 'max-height 0.7s ease-in-out';
   //scroll so the hr is at the center of the screen
 
   window.scrollTo({
