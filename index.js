@@ -136,7 +136,7 @@ const projectList = [
   },
   {
     title: 'Math Magicians',
-    description: 'A website showcasing an event for developers to meet and share ideas.',
+    description: 'A simple yet elegant calculator application built with React.js. <b>Math Magicians</b> is a calculator app that allows users to perform simple calculations and read a random motivational quote for when the Maths gets rough. <b>Tags:</b>',
     image: './assets/math.png',
     live: 'https://math-magicians-hvym.onrender.com',
     source: 'https://github.com/aamir-asaram/math-magicians',
@@ -145,8 +145,8 @@ const projectList = [
   },
   {
     title: 'CMS Bookstore',
-    description: 'A website showcasing an event for developers to meet and share ideas.',
-    image: './assets/math.png',
+    description: 'A simple React.js project that served as an introduction to working with Redux and Axios. <b>CMS bookstore</b> is an application that allows users to store books in a list and remove them once complete.<b>Tags:</b>',
+    image: './assets/book.png',
     live: '',
     source: 'https://github.com/aamir-asaram/bookstore',
     tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
