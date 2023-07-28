@@ -310,10 +310,10 @@ const socials = () => {
   socials.classList.add('socials');
   socials.innerHTML = `
     <a href="https://www.github.com/aamir-asaram"><i class="fab fa-github"></i></a>
-    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-angellist"></i></a>
-    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-medium"></i></a>
+    <a href="https://www.linkedin.com/in/aamir-asaram/"><i class="fab fa-linkedin"></i></a>
+    <a href="https://twitter.com/aaaaamir_"><i class="fab fa-twitter"></i></a>
+    <a href="https://wellfound.com/u/aamir-asaram"><i class="fab fa-angellist"></i></a>
+    <a href="https://medium.com/@aamir-asaram"><i class="fab fa-medium"></i></a>
   `;
   document.body.appendChild(socials);
 }
