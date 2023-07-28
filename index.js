@@ -377,3 +377,12 @@ emailAddress.addEventListener('mouseleave', () => {
     emailUnderline.style.display = 'none';
   }, 550);
 });
+
+const resume = document.querySelector('#resume');
+resume.addEventListener('click', () => {
+  //navigate to resume
+  window.open(
+    'https://docs.google.com/document/d/1rywuRspQ3iU5hLmfXay_Z35_IJKpplL2otKaQy_bciw/edit?usp=sharing',
+    '_blank'
+  );
+});
