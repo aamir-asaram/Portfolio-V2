@@ -212,7 +212,6 @@ const moveBack = () => {
 
 
   // }, 800);
-  projectContainer.style.maxHeight = '300px';
   projectContainer.style.height = 'auto';
   // add transition to container resize
   projectContainer.style.transition = 'max-height 0.7s ease-in-out';
