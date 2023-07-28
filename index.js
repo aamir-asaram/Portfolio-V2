@@ -269,17 +269,94 @@ const removeProjectDetails = () => {
   })
 }
 
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const form = document.querySelector('form');
 const submit = document.querySelector('#form-submit');
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  const name = document.querySelector('#name');
-  const email = document.querySelector('#email');
-  const message = document.querySelector('#message');
-  const form = document.querySelector('form');
-
   if (name.value && email.value && message.value) {
     form.submit();
     form.reset();
   }
+});
+
+//form styling
+const inputs = document.querySelectorAll('input');
+const textArea = document.querySelector('textarea');
+inputs.forEach((input) => {
+  input.addEventListener('focus', () => {
+    input.style.outline = 'none';
+  });
+  input.addEventListener('blur', () => {
+    input.style.outline = 'none';
+  });
+});
+
+textArea.addEventListener('focus', () => {
+  textArea.style.outline = 'none';
+});
+textArea.addEventListener('blur', () => {
+  textArea.style.outline = 'none';
+});
+
+//add a sticky div at the bottom of the screen when the about section is scrolled past
+const about = document.querySelector('#about');
+
+const socials = () => {
+  const socials = document.createElement('div');
+  socials.classList.add('socials');
+  socials.innerHTML = `
+    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-github"></i></a>
+    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-angellist"></i></a>
+    <a href="https://www.github.com/aamir-asaram"><i class="fab fa-medium"></i></a>
+  `;
+  document.body.appendChild(socials);
+}
+
+let socialsBar = false;
+
+//add a sticky div at the bottom of the screen when the about section is scrolled past
+const addSocials = () => {
+  if (window.scrollY > about.offsetTop) {
+    if (!socialsBar) {
+      socials();
+      socialsBar = true;
+    }
+  } else {
+    const socials = document.querySelector('.socials');
+    if (socials) {
+      socials.parentElement.removeChild(socials);
+      socialsBar = false;
+    }
+  }
+}
+
+window.addEventListener('scroll', () => {
+  addSocials();
+  console.log(window.scrollY);
+})
+
+const emailAddress = document.querySelector('.email-add');
+const emailUnderline = document.querySelector('#email-container hr');
+emailAddress.addEventListener('mouseenter', () => {
+  console.log('enter');
+  emailUnderline.style.display = 'block';
+  setTimeout(() => {
+    emailUnderline.style.width = '100%';
+    emailUnderline.style.transition = 'width 0.5s ease-in-out';
+  }, 100);
+});
+
+emailAddress.addEventListener('mouseleave', () => {
+  console.log('leave');
+  emailUnderline.style.width = '0';
+  emailUnderline.style.transition = 'width 0.5s ease-in-out';
+  setTimeout(() => {
+    emailUnderline.style.display = 'none';
+  }, 550);
 });

@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   color: #fff;
+  /* background-color: #121212; */
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -198,16 +199,13 @@ a:not(:hover) {
   color: #fff;
 }
 
-#mobile-form h2 {
+#form-title {
   margin-top: 30px;
+
 }
 
 #mobile-form:first-child {
   margin-top: 30px;
-}
-
-#mobile-form:last-child {
-  margin-bottom: 32px;
 }
 
 form {
@@ -242,6 +240,7 @@ form > *:not(:last-child) {
 
 textarea {
   width: 90%;
+  height: 200px;
   margin: 6px 0;
 }
 
@@ -265,6 +264,41 @@ input[type="submit"]:hover {
   margin: 0;
   width: 100%;
   background-color: #121212;
+}
+
+#below-form {
+  margin-top: 22px;
+}
+
+.socials {
+  position: fixed;
+  bottom: 0;
+  /* curve the top corners */
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly ;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(10px);
+}
+
+.socials a {
+  background-color: transparent;
+  border: none;
+}
+
+.socials i {
+  color: #fff;
+  font-size: 26px;
+  margin: 0 10px;
+}
+
+.socials a:active {
+  color: #fff;
 }
 
 #about-title {
@@ -516,6 +550,65 @@ hr {
 
 .live:last-child {
   margin-bottom: 36px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: #2a2a2a;
+  padding-bottom: 32px;
+}
+
+/* make contact overlap with previous section */
+#contact {
+  margin-top: -32px;
+}
+
+#contact h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#contact h2:last-child {
+  margin-top: 6px;
+  margin-bottom: 26px;
+}
+
+#email-title {
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.email-add {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  width: min-content;
+}
+
+#email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  overflow: hidden;
+}
+
+#email-container hr {
+  display: none;
+  width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* media query for desktop */
