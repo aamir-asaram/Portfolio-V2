@@ -18,9 +18,25 @@ const setGreetings = () => {
 
   const greeting = document.querySelector('#about-title');
   greeting.textContent = `Good ${timeOfDay[timeIndex]}.`;
-  }
 
-setInterval(setGreetings, 400);
+  const intro = document.querySelector('#introduction');
+  intro.innerHTML = `
+  <b>I'm Aamir</b> and I am a full-stack software developer with a passion for bridging the gap
+    between the imagination and reality using code. I like building things <b>from scratch</b>
+    and I am always looking to learn new technologies and improve my skills. <br><br>I enjoy focusing on
+    <b>the details</b>. The things most people don't really think about. For example: no, I didn't
+    assume you'd visit this website in the <b>${timeOfDay[timeIndex]}</b>. I instead wrote a function to
+    check what time it is and then display the appropriate greeting. <br><br>If you like my ideas, have any ideas for a
+    project or would like to collaborate, please feel free to <b id="goto-contact">contact me</b>!
+  `;
+}
+
+// const gotoContact = document.querySelector('#goto-contact');
+// gotoContact.addEventListener('click', () => {
+//   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+// });
+
+setInterval(setGreetings, 1000);
 
 const titles = ['Full-Stack Software Developer', 'Student at Microverse', 'Coffee Fanatic'];
 const title = document.querySelector('#title-text');
@@ -338,7 +354,7 @@ const addSocials = () => {
 
 window.addEventListener('scroll', () => {
   addSocials();
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
 })
 
 const emailAddress = document.querySelector('.email-add');
