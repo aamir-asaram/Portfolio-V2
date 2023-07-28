@@ -270,10 +270,8 @@ input[type="submit"]:hover {
   width: 85%;
   font-size: 17px;
   padding: 10px;
-  padding-left: 16px;
   margin-left: 4%;
-  margin-top: 6px;
-  background-color: #2a2a2a;
+  margin-top: 16px;
 }
 
 #introduction b {
@@ -410,7 +408,6 @@ hr {
 
 #skills {
   width: 90%;
-  max-height: 380px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -460,7 +457,6 @@ hr {
   flex-direction: row;
   align-items: center;
   width: 90%;
-  height: 150px;
   margin-bottom: 32px;
   margin-left: 5%;
   /* enable scrolling on x axis without overflow */
@@ -471,6 +467,15 @@ hr {
 
 #projects::-webkit-scrollbar {
   display: none;
+}
+
+#projects ul {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+#tech-title {
+  margin-bottom: 8px;
 }
 
 .project {

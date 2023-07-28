@@ -21,7 +21,7 @@ const setGreetings = () => {
 
   const intro = document.querySelector('#introduction');
   intro.innerHTML = `
-  <b>I'm Aamir</b> and I am a full-stack software developer with a passion for bridging the gap
+  <b>My name is Aamir</b> and I am a full-stack software developer with a passion for bridging the gap
     between the imagination and reality using code. I like building things <b>from scratch</b>
     and I am always looking to learn new technologies and improve my skills. <br><br>I enjoy focusing on
     <b>the details</b>. The things most people don't really think about. For example: no, I didn't
@@ -152,7 +152,19 @@ const projectList = [
     tags: ['React', 'Redux', 'JavaScript', 'Desktop Only'],
     icon: 'fas fa-book',
   },
-]
+];
+
+const mySkills = [
+  'Java', 'Python', 'JavaScript', 'React', 'Vue', 'Redux', 'Bootstrap',
+  'Ruby', 'Ruby on Rails', 'SQL', 'Git', 'GitHub', 'Webpack', 'Jest',
+  'ESLint', 'VSCode', 'Figma', 'Linux', 'Markdown', 'Microsoft Office'
+];
+
+const technologies = document.querySelector('#technologies');
+
+mySkills.forEach((skill) => {
+  technologies.innerHTML += `<li>${skill}</li>`;
+});
 
 const projectContainer = document.querySelector('#skills');
 
@@ -333,7 +345,7 @@ let socialsBar = false;
 
 //add a sticky div at the bottom of the screen when the about section is scrolled past
 const addSocials = () => {
-  if (window.scrollY > about.offsetTop) {
+  if (window.scrollY > 150) {
     if (!socialsBar) {
       socials();
       socialsBar = true;
