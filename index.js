@@ -31,11 +31,6 @@ const setGreetings = () => {
   `;
 }
 
-// const gotoContact = document.querySelector('#goto-contact');
-// gotoContact.addEventListener('click', () => {
-//   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-// });
-
 setInterval(setGreetings, 1000);
 
 const titles = ['Full-Stack Software Developer', 'Student at Microverse', 'Coffee Fanatic'];
