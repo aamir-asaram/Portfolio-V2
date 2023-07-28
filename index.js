@@ -22,11 +22,11 @@ const setGreetings = () => {
   const intro = document.querySelector('#introduction');
   intro.innerHTML = `
   <b>My name is Aamir</b> and I am a full-stack software developer with a passion for bridging the gap
-    between the imagination and reality using code. I like building things <b>from scratch</b>
-    and I am always looking to learn new technologies and improve my skills. <br><br>I enjoy focusing on
+    between imagination and reality using code. I like building things <b>from scratch</b>
+    and I'm always looking to learn new technologies and improve my skills. <br><br>I enjoy focusing on
     <b>the details</b>. The things most people don't really think about. For example: no, I didn't
     assume you'd visit this website in the <b>${timeOfDay[timeIndex]}</b>. I instead wrote a function to
-    check what time it is and then display the appropriate greeting. <br><br>If you like my ideas, have any ideas for a
+    check what time it is and then display the appropriate greeting. <br><br>If you like my ideas, have any concepts for a
     project or would like to collaborate, please feel free to <b id="goto-contact">contact me</b>!
   `;
 }
