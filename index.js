@@ -117,6 +117,16 @@ const projectList = [
     icon: 'fas fa-coffee',
   },
   {
+    title: 'Power Outage Tracker',
+    description: `<b>Power Outage Tracker</b> is a web application that provides a ten day power outage forecast for various
+                  zones across South Africa using the Eskom Calendar API. Based on the Behance design by <a id+"credit" href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa</a><b>Tags:</b>`,
+    image: './assets/outage.png',
+    live: 'https://power-outage-tracker-qzsq.onrender.com/',
+    source: 'https://github.com/aamir-asaram/power-outage-tracker',
+    tags: ['React', 'Redux', 'JavaScript', 'Mobile Only'],
+    icon: 'fas fa-lightbulb',
+  },
+  {
     title: 'Space Travelers&apos; Hub',
     description: '<b>Space Travelers&apos; Hub</b> is a web application for a company that provides commercial and scientific space travel services. <b>Tags:</b>',
     image: './assets/space.png',
@@ -157,7 +167,7 @@ const projectList = [
 const mySkills = [
   'Java', 'Python', 'JavaScript', 'React', 'Vue', 'Redux', 'Bootstrap',
   'Ruby', 'Ruby on Rails', 'SQL', 'Git', 'GitHub', 'Webpack', 'Jest',
-  'ESLint', 'VSCode', 'Figma', 'Linux', 'Markdown', 'Microsoft Office'
+  'ESLint', 'VSCode', 'Figma', 'Linux', 'Markdown', 'Tailwind CSS'
 ];
 
 const technologies = document.querySelector('#technologies');
@@ -219,30 +229,33 @@ const moveBack = () => {
 }
 
 //add event listeners to all projects
-projects.forEach((project) => {
-  project.addEventListener('click', () => {
-    if (openProject && openedProject === project) {
-      removeProjectDetails();
-      moveBack();
-      openProject = false;
-      openedProject = null;
-    } else if (openProject) {
-      //add hover effect to opened project
-      removeProjectDetails();
-      addProjectDetails(project);
-      moveDown(project);
+// if window width is less than 768px, add event listener to the project title
+if (window.innerWidth < 768) {
+  projects.forEach((project) => {
+    project.addEventListener('click', () => {
+      if (openProject && openedProject === project) {
+        removeProjectDetails();
+        moveBack();
+        openProject = false;
+        openedProject = null;
+      } else if (openProject) {
+        //add hover effect to opened project
+        removeProjectDetails();
+        addProjectDetails(project);
+        moveDown(project);
 
-      openProject = true;
-      openedProject = project;
-    } else {
-      addProjectDetails(project);
-      moveDown(project);
+        openProject = true;
+        openedProject = project;
+      } else {
+        addProjectDetails(project);
+        moveDown(project);
 
-      openProject = true;
-      openedProject = project;
-    }
+        openProject = true;
+        openedProject = project;
+      }
+    });
   });
-});
+}
 
 //add a div with the project details below the clicked project
 const addProjectDetails = (project) => {

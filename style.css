@@ -529,6 +529,12 @@ hr {
   text-align: center;
 }
 
+.project-details a {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+}
+
 .project-details h2 {
   font-size: 26px;
   margin-top: 0;
@@ -649,21 +655,72 @@ hr {
 
 /* media query for desktop */
 @media only screen and (min-width: 768px) {
+
+  hr {
+    display: none;
+  }
+
   body {
     margin: 0;
     padding: 0;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-x: hidden ;
-    background-color: black;
   }
 
-  body > * {
-    border-radius: 25px;
+  #intro-para {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 2%;
   }
 
-  #title {
+  #intro-para h2 {
+    width: 30%;
+  }
+
+  #intro-para p {
+    margin-top: 3%;
+    font-size: 20px ;
+  }
+
+  #project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 2%;
+  }
+
+  #project-container h2 {
+    width: 30%;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    font-size: 45px;
+    text-align: center;
+  }
+
+  #skills {
+    flex-wrap: nowrap;
+    width: 75%;
+    height: 20vh;
+    margin: 0;
+    border: #1db954 3px solid;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  #skills > * {
+    height: 100%;
+    width: 400px;
+  }
+
+  /* #title {
     width: clamp(300px, 30%, 350px);
     height: 100vh;
     background: linear-gradient(180deg, #414141aa, #272727aa);
@@ -672,18 +729,15 @@ hr {
     align-items: center;
     margin: 0;
     justify-content: flex-end;
-  }
+  } */
 
   #title img {
     margin-top: 20px;
-    width: clamp(200px, 90%, 500px);
+    height: 60vh;
+    width: 60vh;
     aspect-ratio: 1/1;
     /* add a gradient box shadow almost matching background */
     box-shadow: 0px 0px 5px 5px #272727aa;
-  }
-
-  .top {
-    display: none;
   }
 
   #prog-bar-full {
